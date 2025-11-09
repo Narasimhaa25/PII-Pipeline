@@ -160,6 +160,26 @@ The ingestor consumes from `sanitized-events` and appends masked messages to `da
 python ingestor/consumer_ingestor.py
 ```
 
+## Monitoring Kafka Topics
+
+To monitor the messages in the Kafka topics, use the following commands to consume from the topics:
+
+**Consume from input-events topic:**
+```bash
+docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic input-events \
+  --from-beginning
+```
+
+**Consume from sanitized-events topic:**
+```bash
+docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic sanitized-events \
+  --from-beginning
+```
+
 ## Output Format
 ```json
 {
