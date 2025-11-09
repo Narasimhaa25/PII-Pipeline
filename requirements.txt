@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+kafka-python
+aiokafka
+python-dotenv
+pydantic
+langgraph
+langchain
+langchain-openai
+langchain-core
+faker
+
+# Presidio for rule-based PII detection
+presidio-analyzer
+presidio-anonymizer
+spacy

@@ -1,0 +1,538 @@
+{
+  "messages": [
+    {
+      "ticket_id": "CUST2354",
+      "customer_id": "CUST2354",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can you delete my account and data? You can reach me at [EMAIL] or call [PHONE]. My address is [ADDRESS]. SSN: [ACCOUNT], Card: [ACCOUNT].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:13:34.663051"
+    },
+    {
+      "ticket_id": "CUST8203",
+      "customer_id": "CUST8203",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call [PHONE]. My address is [ADDRESS]. SSN: [ACCOUNT], Card: [ACCOUNT].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:13:43.660280"
+    },
+    {
+      "ticket_id": "CUST6820",
+      "customer_id": "CUST6820",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Where is my package? You can reach me at [EMAIL] or call [PHONE]. My address is [ADDRESS]. SSN: [ACCOUNT], Card: [ACCOUNT].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:13:51.583501"
+    },
+    {
+      "ticket_id": "CUST2354",
+      "customer_id": "CUST2354",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can you delete my account and data? You can reach me at [EMAIL] or call [PHONE]. My address is 631 Dominguez Shore Suite 805, [ADDRESS], ME 77367. SSN: [SSN], Card: 4286290945915597963.",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.210291"
+    },
+    {
+      "ticket_id": "CUST8203",
+      "customer_id": "CUST8203",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call [PHONE]. My address is 1064 [NAME], [ADDRESS], [ADDRESS] [DATE]. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.210783"
+    },
+    {
+      "ticket_id": "CUST6820",
+      "customer_id": "CUST6820",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Where is my package? You can reach me at [EMAIL] or call [PHONE]. My address is 5030 Christian Keys, [ADDRESS], [NAME]. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.210981"
+    },
+    {
+      "ticket_id": "CUST7540",
+      "customer_id": "CUST7540",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can I speak to a representative? You can reach me at [EMAIL] or call [PHONE]. My address is 096 Frazier Turnpike, Richardbury, [NAME]. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.211166"
+    },
+    {
+      "ticket_id": "CUST5320",
+      "customer_id": "CUST5320",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please update my phone number. You can reach me at [EMAIL] or call [PHONE]. My address is [DATE] Lucas Ports Apt. 332, [ADDRESS], [ADDRESS] 65289. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.211345"
+    },
+    {
+      "ticket_id": "CUST5946",
+      "customer_id": "CUST5946",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please cancel my subscription. You can reach me at [EMAIL] or call +1-211-500-0230x85899. My address is 86758 [NAME]. 392, [ADDRESS], CT 92800. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.211524"
+    },
+    {
+      "ticket_id": "CUST3255",
+      "customer_id": "CUST3255",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I want to change my delivery address. You can reach me at [EMAIL] or call [PHONE]. My address is PSC 9599, Box 1337, APO AA 79487. SSN: [SSN], Card: 4667717501107154240.",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.211755"
+    },
+    {
+      "ticket_id": "CUST9303",
+      "customer_id": "CUST9303",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can I speak to a representative? You can reach me at [EMAIL] or call +1-969-623-2635x351. My address is [DATE] [NAME]. 654, [ADDRESS], VT 36407. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.212001"
+    },
+    {
+      "ticket_id": "CUST1166",
+      "customer_id": "CUST1166",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I need to update my billing information You can reach me at [EMAIL] or call 001-333-518-5744x47704. My address is 387 [NAME]. 517, [ADDRESS], [ADDRESS] [DATE]. SSN: [SSN], Card: 4966340601417546134.",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.212248"
+    },
+    {
+      "ticket_id": "CUST9421",
+      "customer_id": "CUST9421",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can you delete my account and data? You can reach me at [EMAIL] or call 578.250.1374x175. My address is USCGC Hernandez, FPO AE 05171. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.212690"
+    },
+    {
+      "ticket_id": "CUST9648",
+      "customer_id": "CUST9648",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please cancel my subscription. You can reach me at [EMAIL] or call [PHONE]. My address is 197 [NAME], [ADDRESS], CT 00934. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.213165"
+    },
+    {
+      "ticket_id": "CUST3400",
+      "customer_id": "CUST3400",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Track my order status please You can reach me at [EMAIL] or call 266-217-0457x8781. My address is 24943 Julie Ranch, [NAME], GU 53218. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.213648"
+    },
+    {
+      "ticket_id": "CUST4551",
+      "customer_id": "CUST4551",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can I get a refund for my order? You can reach me at [EMAIL] or call [PHONE]. My address is Unit 0014 Box 3763, DPO AA 63590. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.214066"
+    },
+    {
+      "ticket_id": "CUST7806",
+      "customer_id": "CUST7806",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Issue with my last payment You can reach me at [EMAIL] or call [PHONE]. My address is 985 [NAME], Laurenland, AL 55798. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.214431"
+    },
+    {
+      "ticket_id": "CUST9248",
+      "customer_id": "CUST9248",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can I speak to a representative? You can reach me at [EMAIL] or call [PHONE]. My address is 72793 [ADDRESS], Port Matthewfurt, OK 34280. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.214760"
+    },
+    {
+      "ticket_id": "CUST9852",
+      "customer_id": "CUST9852",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. My credit card payment failed. You can reach me at [EMAIL] or call [PHONE]. My address is PSC 3191, Box [DATE], APO AE 73197. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.215052"
+    },
+    {
+      "ticket_id": "CUST1548",
+      "customer_id": "CUST1548",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can you delete my account and data? You can reach me at [EMAIL] or call [PHONE]. My address is 22848 Mcgee Locks, Pittmanland, [ADDRESS] 64696. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.215489"
+    },
+    {
+      "ticket_id": "CUST3864",
+      "customer_id": "CUST3864",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Cancel my recent purchase You can reach me at [EMAIL] or call [PHONE]. My address is 930 [NAME], [ADDRESS], [ADDRESS] 78760. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.215780"
+    },
+    {
+      "ticket_id": "CUST7180",
+      "customer_id": "CUST7180",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please cancel my subscription. You can reach me at [EMAIL] or call [PHONE]. My address is 97807 Baker Overpass, Port Lisa, NV 20432. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.216060"
+    },
+    {
+      "ticket_id": "CUST7773",
+      "customer_id": "CUST7773",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call [PHONE]. My address is 956 [NAME]. 353, [PII], AL 35150. SSN: [SSN], Card: 4034986593068602686.",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.216346"
+    },
+    {
+      "ticket_id": "CUST5076",
+      "customer_id": "CUST5076",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Cancel my recent purchase You can reach me at [EMAIL] or call +1-783-794-9111x3611. My address is 749 [NAME] 194, [NAME], MS 60983. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.216724"
+    },
+    {
+      "ticket_id": "CUST7732",
+      "customer_id": "CUST7732",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I want to change my delivery address. You can reach me at [EMAIL] or call [PHONE]. My address is 132 [NAME], [ADDRESS], CA 85904. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.217028"
+    },
+    {
+      "ticket_id": "CUST5950",
+      "customer_id": "CUST5950",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I need to update my billing information You can reach me at [EMAIL] or call [PHONE]. My address is [NAME] Wall Suite 691, [ADDRESS], AS 88063. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.217334"
+    },
+    {
+      "ticket_id": "CUST1297",
+      "customer_id": "CUST1297",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Issue with my last payment You can reach me at [EMAIL] or call [PHONE]. My address is [DATE] Walter River, Dianaside, [ADDRESS] 88245. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.217878"
+    },
+    {
+      "ticket_id": "CUST5843",
+      "customer_id": "CUST5843",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can you delete my account and data? You can reach me at [EMAIL] or call [PHONE]. My address is 72683 Boyd Views Suite 974, [NAME], ME 55630. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.218237"
+    },
+    {
+      "ticket_id": "CUST4355",
+      "customer_id": "CUST4355",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I want to change my delivery address. You can reach me at [EMAIL] or call [PHONE]. My address is 9509 Brown Shore, [ADDRESS], NM 69141. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.218604"
+    },
+    {
+      "ticket_id": "CUST9723",
+      "customer_id": "CUST9723",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Where is my package? You can reach me at [EMAIL] or call 001-764-398-0381. My address is 0723 [ADDRESS], [ADDRESS], FL 93981. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.218936"
+    },
+    {
+      "ticket_id": "CUST4912",
+      "customer_id": "CUST4912",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I want to change my delivery address. You can reach me at [EMAIL] or call [PHONE]. My address is 90210 [NAME]. 788, [ADDRESS], RI 77198. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.219262"
+    },
+    {
+      "ticket_id": "CUST1913",
+      "customer_id": "CUST1913",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Cancel my recent purchase You can reach me at [EMAIL] or call [PHONE]. My address is [DATE] [NAME]. 922, [ADDRESS], AS 03319. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.219590"
+    },
+    {
+      "ticket_id": "CUST6757",
+      "customer_id": "CUST6757",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Where is my package? You can reach me at [EMAIL] or call [PHONE]. My address is 07452 Catherine Crescent, [ADDRESS], AK 72981. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.276474"
+    },
+    {
+      "ticket_id": "CUST2785",
+      "customer_id": "CUST2785",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please update my phone number. You can reach me at [EMAIL] or call [PHONE]. My address is 7982 [NAME], [ADDRESS], IL 53446. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.389154"
+    },
+    {
+      "ticket_id": "CUST3844",
+      "customer_id": "CUST3844",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call +1-673-656-4159x219. My address is 062 [NAME], [NAME], ND 19249. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.489085"
+    },
+    {
+      "ticket_id": "CUST7893",
+      "customer_id": "CUST7893",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Cancel my recent purchase You can reach me at [EMAIL] or call [PHONE]. My address is 9848 [NAME]. 077, [ADDRESS], NH 32471. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.593666"
+    },
+    {
+      "ticket_id": "CUST3579",
+      "customer_id": "CUST3579",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call 001-556-441-9115. My address is 538 Peters Fields Apt. 987, [NAME], MI 60177. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.707096"
+    },
+    {
+      "ticket_id": "CUST4829",
+      "customer_id": "CUST4829",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Where is my package? You can reach me at [EMAIL] or call [PHONE]. My address is 922 Stephen Extensions Suite 954, [NAME], OK 75469. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.818904"
+    },
+    {
+      "ticket_id": "CUST6551",
+      "customer_id": "CUST6551",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please cancel my subscription. You can reach me at [EMAIL] or call [PHONE]. My address is 2340 Johnson Burgs, Goodwinland, PA 26638. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:54.931661"
+    },
+    {
+      "ticket_id": "CUST3224",
+      "customer_id": "CUST3224",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can you delete my account and data? You can reach me at [EMAIL] or call +1-969-362-4626x38388. My address is 659 [NAME], [PII], [ADDRESS] 26583. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.047204"
+    },
+    {
+      "ticket_id": "CUST6601",
+      "customer_id": "CUST6601",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I need to update my billing information You can reach me at [EMAIL] or call [PHONE]. My address is [ADDRESS], Heidimouth, PW 90215. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.121228"
+    },
+    {
+      "ticket_id": "CUST9027",
+      "customer_id": "CUST9027",
+      "original_message": "",
+      "masked_message": "Hi, my name is Ms. [NAME]. Can I speak to a representative? You can reach me at [EMAIL] or call (340)431-1940x05424. My address is [ADDRESS], Smithview, GU 87096. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.226932"
+    },
+    {
+      "ticket_id": "CUST3236",
+      "customer_id": "CUST3236",
+      "original_message": "",
+      "masked_message": "Hi, my name is Dr. [NAME]. Can I get a refund for my order? You can reach me at [EMAIL] or call +1-284-660-9951x105. My address is Unit [NAME] [DATE], DPO AE 57976. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.335527"
+    },
+    {
+      "ticket_id": "CUST6457",
+      "customer_id": "CUST6457",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call [PHONE]. My address is 74292 Smith Run, Glennmouth, [ADDRESS] 48170. SSN: [SSN], Card: 4634201448823937602.",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.437797"
+    },
+    {
+      "ticket_id": "CUST6015",
+      "customer_id": "CUST6015",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. I accidentally ordered twice, can I get a refund? You can reach me at [EMAIL] or call [PHONE]. My address is 3777 [ADDRESS], [ADDRESS], NH 98382. SSN: [SSN], Card: [DATE].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.719440"
+    },
+    {
+      "ticket_id": "CUST7175",
+      "customer_id": "CUST7175",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please update my phone number. You can reach me at [EMAIL] or call [PHONE]. My address is 757 [NAME], [ADDRESS], CA 61015. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.749635"
+    },
+    {
+      "ticket_id": "CUST5986",
+      "customer_id": "CUST5986",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can I get a refund for my order? You can reach me at [EMAIL] or call [PHONE]. My address is [NAME], Scottbury, MA 03281. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.819056"
+    },
+    {
+      "ticket_id": "CUST2007",
+      "customer_id": "CUST2007",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. My credit card payment failed. You can reach me at [EMAIL] or call [PHONE]. My address is 832 [NAME], [ADDRESS], FM 70968. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:55.926799"
+    },
+    {
+      "ticket_id": "CUST1514",
+      "customer_id": "CUST1514",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Can I speak to a representative? You can reach me at [EMAIL] or call [PHONE]. My address is [DATE] [NAME]. 091, [NAME], OR 09287. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:56.034049"
+    },
+    {
+      "ticket_id": "CUST2673",
+      "customer_id": "CUST2673",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please update my phone number. You can reach me at [EMAIL] or call [PHONE]. My address is 56298 Jackson Circle Apt. 250, Amandatown, OK [DATE]. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:56.137193"
+    },
+    {
+      "ticket_id": "CUST8375",
+      "customer_id": "CUST8375",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Help me reset my account password You can reach me at [EMAIL] or call +1-298-316-9684x321. My address is 86237 Reyes Tunnel Apt. 567, [ADDRESS], [DATE]. SSN: [SSN], Card: [CREDIT_CARD].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:56.245715"
+    },
+    {
+      "ticket_id": "CUST3071",
+      "customer_id": "CUST3071",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Issue with my last payment You can reach me at [EMAIL] or call [PHONE]. My address is [DATE] Porter Summit Suite 677, [ADDRESS], [ADDRESS] 80604. SSN: [SSN], Card: 4524499969998523384.",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:56.348460"
+    },
+    {
+      "ticket_id": "CUST2044",
+      "customer_id": "CUST2044",
+      "original_message": "",
+      "masked_message": "Hi, my name is [NAME]. Please update my phone number. You can reach me at [EMAIL] or call [PHONE]. My address is 411 George Crest Suite 037, [NAME], GU 61584. SSN: [SSN], Card: [PII].",
+      "detected_pii": {},
+      "agent_reasoning": "",
+      "processor": "langgraph-agent",
+      "processed_at": "2025-11-09T12:14:56.455003"
+    }
+  ],
+  "metadata": {
+    "total": 53,
+    "last_updated": "2025-11-09T12:14:56.455010"
+  }
+}
