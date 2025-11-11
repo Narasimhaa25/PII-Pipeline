@@ -12,13 +12,23 @@ A privacy-focused pipeline for detecting and masking PII using LangGraph agents 
 ## Architecture
 
 ```
-Producer → Kafka (input-events) → Agent (GPT-4o/Presidio) → Kafka (sanitized-events) → JSON Ingestor
+Producer (Host)
+   ↓
+Kafka topic: input-events
+   ↓
+Ambient Agent (LangGraph, external)
+   ↓
+Kafka topic: sanitized-events
+   ↓
+JSON Ingestor (Docker)
+   ↓
+processed_messages.json
 ```
 
 ### Data Flow Explanation:
-1. **Producer** generates synthetic customer messages with PII and sends them to `input-events` topic
-2. **Agent Consumer** (GPT-4o or Presidio) reads from `input-events`, processes messages, and publishes masked results to `sanitized-events`
-3. **JSON Ingestor** consumes from `sanitized-events` and appends results to `data/processed_messages.json`
+1. **Producer** (running on host) generates synthetic customer messages with PII and sends them to `input-events` topic
+2. **Ambient Agent** (LangGraph, external to Docker) reads from `input-events`, processes messages with ML-based PII detection, and publishes masked results to `sanitized-events`
+3. **JSON Ingestor** (Docker container) consumes from `sanitized-events` and appends results to `data/processed_messages.json`
 
 ### Topic Configuration:
 - **input-events**: Raw messages with PII (5-minute retention)
@@ -45,10 +55,11 @@ pii_pipeline/
 │   └── consumer_ingestor.py                # Ingests sanitized-events to JSON
 ├── producer/
 │   ├── batch_producer.py                   # Sends synthetic data to Kafka
+│   ├── dynamic_producer.py                 # Interactive producer for custom messages
 │   └── generate_synthetic_data.py          # Generates synthetic PII data
 ├── requirements.txt                        # Python dependencies
 ├── setup_presidio.sh                       # Presidio setup script
-└── venv/                                   # Python virtual environment
+└── Dockerfile                              # Docker configuration
 ```
 
 ## Quickstart
@@ -93,11 +104,9 @@ A) Consumers first (recommended)
 GPT-4o pipeline (consumers first):
 ```bash
 # Terminal 1 - GPT-4o agent consumer
-source venv/bin/activate
 python consumer/pii_GPTmasker.py
 
 # Terminal 2 - Ingestor (writes to data/processed_messages.json)
-source venv/bin/activate
 python ingestor/consumer_ingestor.py
 
 # Terminal 3 - Producer (sends synthetic messages)
@@ -106,15 +115,13 @@ python producer/batch_producer.py
 
 Presidio pipeline (consumers first):
 ```bash
-# Terminal 1 - Presidio agent consumer
-source venv/bin/activate
+# Terminal 1 - Presidio agent consumer (external)
 python consumer/pii_masker_presidio.py
 
-# Terminal 2 - Ingestor
-source venv/bin/activate
-python ingestor/consumer_ingestor.py
+# Terminal 2 - JSON Ingestor (Docker - runs automatically)
+# (Already started with Kafka)
 
-# Terminal 3 - Producer
+# Terminal 3 - Producer (sends synthetic messages)
 python producer/batch_producer.py
 ```
 
@@ -126,11 +133,9 @@ GPT-4o pipeline (producer first):
 python producer/batch_producer.py
 
 # Terminal 2 - GPT-4o agent consumer (process backlog)
-source venv/bin/activate
 python consumer/pii_GPTmasker.py
 
 # Terminal 3 - Ingestor
-source venv/bin/activate
 python ingestor/consumer_ingestor.py
 ```
 
@@ -139,13 +144,11 @@ Presidio pipeline (producer first):
 # Terminal 1 - Producer
 python producer/batch_producer.py
 
-# Terminal 2 - Presidio agent consumer
-source venv/bin/activate
+# Terminal 2 - Presidio agent consumer (external)
 python consumer/pii_masker_presidio.py
 
-# Terminal 3 - Ingestor
-source venv/bin/activate
-python ingestor/consumer_ingestor.py
+# Terminal 3 - JSON Ingestor (Docker - runs automatically)
+# (Already started with Kafka)
 ```
 
 Notes:
@@ -159,6 +162,34 @@ The ingestor consumes from `sanitized-events` and appends masked messages to `da
 ```bash
 python ingestor/consumer_ingestor.py
 ```
+
+## Ambient Mode (Auto-Triggered Pipeline)
+
+For a fully ambient, event-driven pipeline where **only the producer needs to run** and everything else happens automatically:
+
+### Option A: Background Processes (Manual Setup)
+```bash
+# 1. Start Kafka
+docker-compose -f docker-compose.kafka.yml up -d kafka
+
+# 2. Start ambient listeners in background
+python consumer/pii_masker_presidio.py &  # Presidio consumer (background)
+python ingestor/consumer_ingestor.py &   # JSON ingestor (background)
+
+# 3. Run producer (triggers everything automatically)
+python producer/batch_producer.py
+```
+
+### Option B: Full Docker Orchestration (Zero Manual Setup)
+```bash
+# Start entire pipeline (Kafka + consumers + ingestor)
+docker-compose -f docker-compose.kafka.yml up -d
+
+# Run producer (triggers processing)
+python producer/batch_producer.py
+```
+
+In ambient mode, the consumer and ingestor run as persistent Kafka listeners that automatically process events as they arrive, simulating a real-time streaming system.
 
 ## Monitoring Kafka Topics
 
@@ -246,12 +277,20 @@ python ingestor/consumer_ingestor.py
 ```bash
 python producer/generate_synthetic_data.py
 ```
+
 ### Process Messages Through Pipeline
 ```bash
 python producer/batch_producer.py
 ```
 
 This sends all 50 messages to Kafka for processing.
+
+### Interactive Message Testing
+```bash
+python producer/dynamic_producer.py
+```
+
+This allows you to input custom messages interactively and send them through the PII pipeline for testing.
 
 ## 🔍 How It Works
 
