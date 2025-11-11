@@ -11,8 +11,42 @@ from dotenv import load_dotenv
 load_dotenv()  # Load .env variables if present
 
 
-# Initialize Presidio engines
+# Initialize Presidio engines with ML-based recognizers
 analyzer = AnalyzerEngine()
+
+# Add spaCy ML-based recognizer for better entity detection
+try:
+    from presidio_analyzer.nlp_engine import NlpEngineProvider
+    from presidio_analyzer.nlp_engine.spacy_nlp_engine import SpacyNlpEngine
+
+    # Configure spaCy NLP engine
+    spacy_config = {
+        "nlp_engine_name": "spacy",
+        "models": [{"lang_code": "en", "model_name": "en_core_web_lg"}]
+    }
+
+    # Create NLP engine
+    nlp_engine = NlpEngineProvider(nlp_configuration=spacy_config).create_engine()
+
+    # Add spaCy recognizer for ML-based NER
+    from presidio_analyzer.recognizer_registry import RecognizerRegistry
+    from presidio_analyzer.nlp_engine import SpacyNlpEngine
+
+    # Create registry with spaCy support
+    registry = RecognizerRegistry()
+    registry.load_predefined_recognizers(nlp_engine=nlp_engine)
+
+    # Create analyzer with ML support
+    analyzer = AnalyzerEngine(registry=registry, nlp_engine=nlp_engine)
+
+    print("✓ Using ML-based PII detection with spaCy")
+    USE_ML = True
+
+except ImportError:
+    print("⚠️  spaCy not available, using rule-based detection")
+    print("   Install with: pip install spacy && python -m spacy download en_core_web_lg")
+    USE_ML = False
+
 anonymizer = AnonymizerEngine()
 
 

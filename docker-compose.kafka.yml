@@ -1,35 +1,67 @@
+version: '3.8'
+
 services:
   kafka:
     image: apache/kafka:3.7.0
     container_name: kafka
     environment:
+      # Core configuration
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: 'broker,controller'
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT'
-      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:19092,CONTROLLER://0.0.0.0:9093,PLAINTEXT_HOST://0.0.0.0:9092'
-      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://kafka:19092,PLAINTEXT_HOST://localhost:9092'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,HOST:PLAINTEXT'
+      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:9092,HOST://0.0.0.0:9094,CONTROLLER://0.0.0.0:9093'
+      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://kafka:9092,HOST://localhost:9094'
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
       KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:9093'
 
-      # Enable topic deletion
+      # Quality-of-life settings
       KAFKA_CFG_DELETE_TOPIC_ENABLE: 'true'
-
-      # Short retention for test data
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
       KAFKA_LOG_RETENTION_MS: 300000
       KAFKA_LOG_SEGMENT_DELETE_DELAY_MS: 60000
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-
       CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qk'
+
     ports:
-      - "9092:9092"
+      - "9092:9092"   # internal container network
+      - "9094:9094"   # external host access (for local producers)
     volumes:
       - kafka_data:/var/lib/kafka/data
+    networks:
+      - kafka-network
+
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server kafka:9092 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  json-ingestor:
+    build: .
+    container_name: json-ingestor
+    command: python ingestor/consumer_ingestor.py
+    depends_on:
+      kafka:
+        condition: service_healthy
+    restart: unless-stopped
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - KAFKA_BOOTSTRAP=kafka:9092
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    networks:
+      - kafka-network
 
 volumes:
   kafka_data:
     driver: local
+
+networks:
+  kafka-network:
+    driver: bridge

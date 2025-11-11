@@ -6,13 +6,14 @@ No database required - all data stored in data/ directory.
 import asyncio
 import json
 import os
+import time
 from pathlib import Path
 from datetime import datetime
 from aiokafka import AIOKafkaConsumer
 from dotenv import load_dotenv
 
 load_dotenv()
-BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP", "localhost:9092")
+BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP_SERVERS", os.getenv("KAFKA_BOOTSTRAP", "localhost:9092"))
 
 # JSON file paths
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -69,10 +70,15 @@ def save_processed_message(event: dict):
 
 async def handle_event(event: dict):
     """Handle incoming event from Kafka."""
+    print(f"📥 Consumed message: {event}")
     save_processed_message(event)
 
 async def consume_loop():
     """Consume messages from Kafka and save to JSON."""
+    # Wait for Kafka to be fully ready
+    print("⏳ Waiting 30 seconds for Kafka to be ready...")
+    await asyncio.sleep(30)
+    
     consumer = AIOKafkaConsumer(
         'sanitized-events',
         bootstrap_servers=BOOTSTRAP,
