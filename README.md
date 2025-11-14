@@ -46,12 +46,6 @@ Developers only publish messages → the ambient agent automatically detects, ma
 - Extensible LLM backend
 -->
 
-The system guarantees:
-- Continuous real-time ingestion
-- Deterministic PII masking
-- Complete audit logging
-- Fault tolerance with retry & DLQ
-- Plug‑and‑play LLM backend  
 
 ---
 
