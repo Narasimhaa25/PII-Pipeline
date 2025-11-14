@@ -162,7 +162,7 @@ Listens to sanitized topics and stores:
 ```
 pii_pipeline/
 ├── consumer/
-│   ├── pii_GPTmasker.py      # Ambient agent implementation
+│   ├── pii_GPTmasker.py      # Ambient agent implementation(listener)
 │   └── pii_agent.py          # LangGraph PII detection logic
 ├── llm_service.py            # FastAPI LLM service
 ├── ingestor/
