@@ -1,11 +1,8 @@
-version: '3.8'
-
 services:
   kafka:
     image: apache/kafka:3.7.0
     container_name: kafka
     environment:
-      # Core configuration
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: 'broker,controller'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,HOST:PLAINTEXT'
@@ -14,32 +11,58 @@ services:
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
       KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:9093'
-
-      # Quality-of-life settings
-      KAFKA_CFG_DELETE_TOPIC_ENABLE: 'true'
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_CFG_DELETE_TOPIC_ENABLE: 'true'
       KAFKA_LOG_RETENTION_MS: 300000
-      KAFKA_LOG_SEGMENT_DELETE_DELAY_MS: 60000
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qk'
-
     ports:
-      - "9092:9092"   # internal container network
-      - "9094:9094"   # external host access (for local producers)
+      - "9092:9092"
+      - "9094:9094"
     volumes:
       - kafka_data:/var/lib/kafka/data
     networks:
       - kafka-network
-
     healthcheck:
       test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server kafka:9092 || exit 1"]
       interval: 10s
-      timeout: 5s
       retries: 5
-      start_period: 30s
+      start_period: 25s
+
+  llm-service:
+    build: .
+    container_name: llm-service
+    command: python llm_service.py
+    ports:
+      - "8000:8000"
+    depends_on:
+      kafka:
+        condition: service_healthy
+    restart: unless-stopped
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - .:/app
+    networks:
+      - kafka-network
+
+  ambient-agent:
+    build: .
+    container_name: ambient-agent
+    command: python consumer/pii_GPTmasker.py
+    depends_on:
+      kafka:
+        condition: service_healthy
+      llm-service:
+        condition: service_started
+    restart: unless-stopped
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - LLM_SERVICE_URL=http://llm-service:8000/mask
+    # IMPORTANT: DO NOT MOUNT HOST CODE
+    volumes:
+      - ./data:/app/data
+    networks:
+      - kafka-network
 
   json-ingestor:
     build: .
@@ -50,17 +73,14 @@ services:
         condition: service_healthy
     restart: unless-stopped
     environment:
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
       - KAFKA_BOOTSTRAP=kafka:9092
     volumes:
-      - .:/app
       - ./data:/app/data
     networks:
       - kafka-network
 
 volumes:
   kafka_data:
-    driver: local
 
 networks:
   kafka-network:

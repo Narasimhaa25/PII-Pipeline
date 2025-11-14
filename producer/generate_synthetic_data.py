@@ -56,8 +56,9 @@ def generate_message():
     message = random.choice(templates)
     
     return {
+        "message_id": f"msg-{fake.uuid4()}",
         "customer_id": f"CUST{fake.random_int(1000, 9999)}",
-        "message": message,
+        "text": message,
         "metadata": {
             "generated": True,
             "pii_types": ["name", "email", "phone", "address", "ssn", "credit_card", "date_of_birth", "passport", "license_plate", "bank_account", "ip_address"],

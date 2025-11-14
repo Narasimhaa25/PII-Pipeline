@@ -1,548 +1,96 @@
 {
   "messages": [
     {
-      "ticket_id": "CUST7643",
-      "customer_id": "CUST7643",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME] from [ADDRESS]. I forgot my password. Contact: [EMAIL] or [PHONE]. DOB: [DATE]. SSN: [SSN]. Card ending in [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:15.586590"
+      "message_id": "msg-543057f7-2d64-476a-a97b-484aec16fc38",
+      "customer_id": "CUST9856",
+      "masked_message": "my name is [NAME] lives in [ADDRESS] mobile number [PHONE] with accounnt number of [ACCOUNT] and having a passport of [ACCOUNT] with internation driving license [PHONE]",
+      "has_pii": true,
+      "source_topic": "input-events",
+      "ingested_at": "2025-11-14T14:28:53.105625"
     },
     {
-      "ticket_id": "CUST7801",
-      "customer_id": "CUST7801",
-      "original_message": "",
-      "masked_message": "Hi, my name is [NAME]. I need help with my account. You can reach me at [EMAIL] or call [PHONE]. My address is 160 [NAME] Apt. 274, [NAME], AL 49466. SSN: [SSN], Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:15.712602"
+      "message_id": "unknown",
+      "customer_id": "CUST8508",
+      "masked_message": "",
+      "has_pii": false,
+      "source_topic": "unknown",
+      "ingested_at": "2025-11-14T15:00:00.863338"
     },
     {
-      "ticket_id": "CUST9684",
-      "customer_id": "CUST9684",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME]. My card was charged incorrectly. Email: [EMAIL], Phone: [PHONE]. From [ADDRESS]. Card number: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:15.713553"
+      "message_id": "msg-78ff7757-0ce0-401e-916b-73772003b436",
+      "customer_id": "CUST8508",
+      "masked_message": "i am from india i have ordered product id 232 from your company with the account number [ACCOUNT] reach me at [PHONE]",
+      "has_pii": true,
+      "source_topic": "input-events",
+      "ingested_at": "2025-11-14T15:00:06.167755"
     },
     {
-      "ticket_id": "CUST3388",
-      "customer_id": "CUST3388",
-      "original_message": "",
-      "masked_message": "Hi, I'm [NAME]. Update my profile. Email: [EMAIL], Mobile: [PHONE]. Location: 287 Wells Gateway Apt. 323, [ADDRESS], 64774. Card: [CREDIT_CARD]. License: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:15.714730"
+      "message_id": "unknown",
+      "customer_id": "CUST2032",
+      "masked_message": "",
+      "has_pii": false,
+      "source_topic": "unknown",
+      "ingested_at": "2025-11-14T15:49:44.529925"
     },
     {
-      "ticket_id": "CUST6728",
-      "customer_id": "CUST6728",
-      "original_message": "",
-      "masked_message": "This is [NAME] calling about my order. Email: [EMAIL], Phone: [PHONE]. Shipping address: Unit [NAME], DPO AP 31858. Payment: [CREDIT_CARD]. DOB: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:16.014819"
+      "message_id": "msg-6c00bb76-3541-4cf6-94f5-5a5d64a3b166",
+      "customer_id": "CUST2032",
+      "masked_message": "hello test [PHONE]",
+      "has_pii": true,
+      "source_topic": "input-events",
+      "ingested_at": "2025-11-14T15:49:49.235751"
     },
     {
-      "ticket_id": "CUST1557",
-      "customer_id": "CUST1557",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Track my order please. [NAME]: [EMAIL], Phone: [PHONE]. Shipping to: 25379 Donaldson Causeway Apt. 231, [ADDRESS], [ADDRESS]. Card used: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:16.876321"
+      "message_id": "unknown",
+      "customer_id": "CUST3498",
+      "masked_message": "",
+      "has_pii": false,
+      "source_topic": "unknown",
+      "ingested_at": "2025-11-14T16:31:17.722720"
     },
     {
-      "ticket_id": "CUST4676",
-      "customer_id": "CUST4676",
-      "original_message": "",
-      "masked_message": "This is [NAME] calling about my order. Email: [EMAIL], Phone: [PHONE]. Shipping address: 8298 Wagner Garden Suite 104, [ADDRESS], NM 32164. Payment: [CREDIT_CARD]. DOB: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:17.267048"
+      "message_id": "msg-a7852d92-3dbb-43da-a00d-fd4c92420682",
+      "customer_id": "CUST3498",
+      "masked_message": "hello test [PHONE]",
+      "has_pii": true,
+      "source_topic": "input-events",
+      "ingested_at": "2025-11-14T16:31:20.223614"
     },
     {
-      "ticket_id": "CUST8410",
-      "customer_id": "CUST8410",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. My payment failed. Email: [EMAIL], Phone: [PHONE]. Address: 84060 Mallory Meadow Apt. 117, [NAME], [ADDRESS] 84284. Credit card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:17.796163"
+      "message_id": "unknown",
+      "customer_id": "CUST8246",
+      "masked_message": "",
+      "has_pii": false,
+      "source_topic": "unknown",
+      "ingested_at": "2025-11-14T16:34:56.302449"
     },
     {
-      "ticket_id": "CUST6627",
-      "customer_id": "CUST6627",
-      "original_message": "",
-      "masked_message": "My name is Jessica. Need to change delivery address. [NAME]: [EMAIL], Phone: [PHONE]. New address: 2419 [NAME], [ADDRESS], [ADDRESS] 82184. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:18.309692"
+      "message_id": "msg-878ba76e-ba41-4a4d-9f9d-69a178ab4a24",
+      "customer_id": "CUST8246",
+      "masked_message": "hi my name is [NAME] mobile number is [PHONE]",
+      "has_pii": true,
+      "source_topic": "input-events",
+      "ingested_at": "2025-11-14T16:35:01.284480"
     },
     {
-      "ticket_id": "CUST7196",
-      "customer_id": "CUST7196",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. My payment failed. Email: [EMAIL], Phone: [PHONE]. Address: 3543 [NAME], [ADDRESS], [ADDRESS]. Credit card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:18.844547"
+      "message_id": "unknown",
+      "customer_id": "CUST7794",
+      "masked_message": "",
+      "has_pii": false,
+      "source_topic": "unknown",
+      "ingested_at": "2025-11-14T16:36:44.013624"
     },
     {
-      "ticket_id": "CUST9033",
-      "customer_id": "CUST9033",
-      "original_message": "",
-      "masked_message": "Hi, I'm [NAME]. Update my profile. Email: [EMAIL], Mobile: 001-389-759-4455x8844. Location: 86852 [ADDRESS], [ADDRESS], [DATE]. Card: [CREDIT_CARD]. License: VLF-9040.",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:19.302189"
-    },
-    {
-      "ticket_id": "CUST5404",
-      "customer_id": "CUST5404",
-      "original_message": "",
-      "masked_message": "Hello, I'm [ADDRESS]. Password reset issue. Email: [EMAIL], Phone: 001-255-942-8111x872. Location: North Nicholasmouth, [ADDRESS]. SSN: [SSN]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:19.823036"
-    },
-    {
-      "ticket_id": "CUST2010",
-      "customer_id": "CUST2010",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. I want to update my billing info. [NAME]: [EMAIL], Phone: [PHONE]. Address: 659 Jason Turnpike Apt. 171, [NAME], SC 22366. Bank: [CREDIT_CARD]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:20.349019"
-    },
-    {
-      "ticket_id": "CUST8481",
-      "customer_id": "CUST8481",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME]. My card was charged incorrectly. Email: [EMAIL], Phone: [PHONE]. From [ADDRESS]. Card number: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:20.848176"
-    },
-    {
-      "ticket_id": "CUST3980",
-      "customer_id": "CUST3980",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Password reset issue. Email: [EMAIL], Phone: [PHONE]. Location: [ADDRESS], [ADDRESS]. SSN: [SSN]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:21.326384"
-    },
-    {
-      "ticket_id": "CUST2462",
-      "customer_id": "CUST2462",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. My payment failed. Email: [EMAIL], Phone: 001-396-558-9123x30914. Address: 3095 [NAME], [ADDRESS], Arizona 31806. Credit card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:21.854471"
-    },
-    {
-      "ticket_id": "CUST8249",
-      "customer_id": "CUST8249",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. My payment failed. Email: [EMAIL], Phone: [PHONE]. Address: [DATE] [NAME], [ADDRESS], [ADDRESS] [DATE]. Credit card: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:22.378320"
-    },
-    {
-      "ticket_id": "CUST6192",
-      "customer_id": "CUST6192",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. Need to change delivery address. [NAME]: [EMAIL], Phone: [PHONE]. New address: 48499 Cruz Extension, New Georgemouth, RI 55803. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:22.849760"
-    },
-    {
-      "ticket_id": "CUST4615",
-      "customer_id": "CUST4615",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Password reset issue. Email: [EMAIL], Phone: [PHONE]. Location: [ADDRESS], [ADDRESS]. SSN: [SSN]. Card: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:23.362092"
-    },
-    {
-      "ticket_id": "CUST1220",
-      "customer_id": "CUST1220",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME] from [ADDRESS]. I forgot my password. Contact: [EMAIL] or [PHONE]. DOB: [DATE]. SSN: [SSN]. Card ending in 7251.",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:23.891105"
-    },
-    {
-      "ticket_id": "CUST8799",
-      "customer_id": "CUST8799",
-      "original_message": "",
-      "masked_message": "My name is [NAME] Need to change delivery address. [NAME]: [EMAIL], Phone: [PHONE]. New address: 8974 [NAME], Townsendview, ID 40482. Card: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:24.380858"
-    },
-    {
-      "ticket_id": "CUST9754",
-      "customer_id": "CUST9754",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Password reset issue. Email: [EMAIL], Phone: [PHONE]. Location: [ADDRESS], [ADDRESS]. SSN: [SSN]. Card: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:24.914254"
-    },
-    {
-      "ticket_id": "CUST3821",
-      "customer_id": "CUST3821",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME]. My card was charged incorrectly. Email: [EMAIL], Phone: [PHONE]. From [ADDRESS]. Card number: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:25.462002"
-    },
-    {
-      "ticket_id": "CUST6753",
-      "customer_id": "CUST6753",
-      "original_message": "",
-      "masked_message": "Hi, this is [NAME]. Cancel my subscription. Contact info: [EMAIL], [PHONE]. Address: 71988 Chase Land, [ADDRESS], MT 79321. SSN: [SSN]. Payment card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:25.931343"
-    },
-    {
-      "ticket_id": "CUST9437",
-      "customer_id": "CUST9437",
-      "original_message": "",
-      "masked_message": "This is [NAME] calling about my order. Email: [EMAIL], Phone: [PHONE]. Shipping address: [DATE] Robert Camp Suite 211, [ADDRESS], KS 02182. Payment: [CREDIT_CARD]. DOB: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:26.419208"
-    },
-    {
-      "ticket_id": "CUST7517",
-      "customer_id": "CUST7517",
-      "original_message": "",
-      "masked_message": "This is [NAME] calling about my order. Email: [EMAIL], Phone: [PHONE]. Shipping address: [NAME]. 830, [ADDRESS], AS 02534. Payment: [CREDIT_CARD]. DOB: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:27.001358"
-    },
-    {
-      "ticket_id": "CUST5194",
-      "customer_id": "CUST5194",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME]. My card was charged incorrectly. Email: [EMAIL], Phone: [PHONE]. From [ADDRESS]. Card number: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:27.427993"
-    },
-    {
-      "ticket_id": "CUST2555",
-      "customer_id": "CUST2555",
-      "original_message": "",
-      "masked_message": "Hi, this is [NAME]. Order status inquiry. Contact info: [EMAIL], 560.393.0987. Address: 628 Turner Isle Apt. 632, [NAME], WA 08496. Payment card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:27.929622"
-    },
-    {
-      "ticket_id": "CUST7565",
-      "customer_id": "CUST7565",
-      "original_message": "",
-      "masked_message": "Hi, I'm [NAME]. Update my profile. Email: [EMAIL], Mobile: [PHONE]. Location: 3036 Fowler Lakes, Port Elizabeth, 75283. Card: [CREDIT_CARD]. License: 9-8198K.",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:28.499645"
-    },
-    {
-      "ticket_id": "CUST3746",
-      "customer_id": "CUST3746",
-      "original_message": "",
-      "masked_message": "Hi, this is [NAME]. Order status inquiry. Contact info: [EMAIL], [PHONE]. Address: 3603 Estes Square, Matthewbury, AK 58429. Payment card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:29.268922"
-    },
-    {
-      "ticket_id": "CUST1547",
-      "customer_id": "CUST1547",
-      "original_message": "",
-      "masked_message": "This is [NAME] calling about my order. Email: [EMAIL], Phone: [PHONE]. Shipping address: 74894 Rachel Trafficway Suite 315, [ADDRESS], CA 22186. Payment: [CREDIT_CARD]. DOB: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:29.709246"
-    },
-    {
-      "ticket_id": "CUST9596",
-      "customer_id": "CUST9596",
-      "original_message": "",
-      "masked_message": "Hello [NAME] here. Account security issue. Email: [EMAIL], Phone: [PHONE]. Address: 375 Miller Isle Suite 280, [ADDRESS], [NAME]. SSN: [SSN]. Card: [PII]. Passport: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:30.231230"
-    },
-    {
-      "ticket_id": "CUST9084",
-      "customer_id": "CUST9084",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME] from [ADDRESS]. I forgot my password. Contact: [EMAIL] or [PHONE]. DOB: [DATE]. SSN: [SSN]. Card ending in 8907.",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:30.828578"
-    },
-    {
-      "ticket_id": "CUST8173",
-      "customer_id": "CUST8173",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. I need a refund. Email me at [EMAIL] or call [PHONE]. From [ADDRESS], [ADDRESS]. Credit card [CREDIT_CARD]. IP: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:31.208347"
-    },
-    {
-      "ticket_id": "CUST3209",
-      "customer_id": "CUST3209",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. I need a refund. Email me at [EMAIL] or call [PHONE]. From [ADDRESS], [ADDRESS]. Credit card [CREDIT_CARD]. IP: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:31.767562"
-    },
-    {
-      "ticket_id": "CUST1020",
-      "customer_id": "CUST1020",
-      "original_message": "",
-      "masked_message": "Hello, my name is [NAME]. I have a question about billing. Contact: [EMAIL] or [PHONE]. Address: 407 [NAME] 772, [NAME]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:32.225841"
-    },
-    {
-      "ticket_id": "CUST2517",
-      "customer_id": "CUST2517",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Track my order please. [NAME]: [EMAIL], Phone: +1-643-691-0242. Shipping to: 5492 Hamilton Inlet Suite 211, Port Emilyview, [ADDRESS]. Card used: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:32.773160"
-    },
-    {
-      "ticket_id": "CUST7358",
-      "customer_id": "CUST7358",
-      "original_message": "",
-      "masked_message": "Hello [NAME] here. Account security issue. Email: [EMAIL], Phone: [PHONE]. Address: 959 [NAME], Millermouth, PA 62356. SSN: [SSN]. Card: [CREDIT_CARD]. Passport: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:33.252267"
-    },
-    {
-      "ticket_id": "CUST4636",
-      "customer_id": "CUST4636",
-      "original_message": "",
-      "masked_message": "Hi, I'm Amber. Update my profile. Email: [EMAIL], Mobile: 370-870-5423. Location: 1079 Lindsey Mission, [NAME], [DATE]. Card: [CREDIT_CARD]. License: 787 ZOV.",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:33.784222"
-    },
-    {
-      "ticket_id": "CUST2935",
-      "customer_id": "CUST2935",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. My payment failed. Email: [EMAIL], Phone: 429.282.4414. Address: 78044 [NAME]. 577, [ADDRESS], [ADDRESS] [DATE]. Credit card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:34.371433"
-    },
-    {
-      "ticket_id": "CUST7927",
-      "customer_id": "CUST7927",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. I want to update my billing info. [NAME]: [EMAIL], Phone: [PHONE]. Address: 69230 [NAME]. 849, [ADDRESS], IN [DATE]. Bank: [CREDIT_CARD]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:34.792413"
-    },
-    {
-      "ticket_id": "CUST8595",
-      "customer_id": "CUST8595",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. I want to update my billing info. [NAME]: [EMAIL], Phone: [PHONE]. Address: 3869 Jeffery Centers Apt. 270, [ADDRESS], ID 54402. Bank: [CREDIT_CARD]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:35.558542"
-    },
-    {
-      "ticket_id": "CUST6822",
-      "customer_id": "CUST6822",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. Need to change delivery address. [NAME]: [EMAIL], Phone: [PHONE]. New address: [DATE] Billy Estate Apt. 857, [NAME], UT 26024. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:35.912174"
-    },
-    {
-      "ticket_id": "CUST3000",
-      "customer_id": "CUST3000",
-      "original_message": "",
-      "masked_message": "Hello [NAME] here. Account security issue. Email: [EMAIL], Phone: [PHONE]. Address: 1279 [NAME], [NAME], NE 36036. SSN: [SSN]. Card: [CREDIT_CARD]. Passport: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:36.419678"
-    },
-    {
-      "ticket_id": "CUST6358",
-      "customer_id": "CUST6358",
-      "original_message": "",
-      "masked_message": "Hi there, this is [NAME]. My card was charged incorrectly. Email: [EMAIL], Phone: [PHONE]. From [ADDRESS]. Card number: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:36.898902"
-    },
-    {
-      "ticket_id": "CUST5727",
-      "customer_id": "CUST5727",
-      "original_message": "",
-      "masked_message": "This is [NAME] calling about my order. Email: [EMAIL], Phone: [PHONE]. Shipping address: 8821 Chelsea Corner Apt. 332, Lorettabury, MS 91703. Payment: [CREDIT_CARD]. DOB: [DATE].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:37.434172"
-    },
-    {
-      "ticket_id": "CUST5755",
-      "customer_id": "CUST5755",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Password reset issue. Email: [EMAIL], Phone: [PHONE]. Location: East Mike, [ADDRESS]. SSN: [SSN]. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:37.932320"
-    },
-    {
-      "ticket_id": "CUST9503",
-      "customer_id": "CUST9503",
-      "original_message": "",
-      "masked_message": "Hello [NAME] here. Account security issue. Email: [EMAIL], Phone: 379.298.1842x508. Address: 2725 [NAME], Port Cynthia, AL 55626. SSN: [SSN]. Card: [PII]. Passport: [PII].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:38.458631"
-    },
-    {
-      "ticket_id": "CUST3715",
-      "customer_id": "CUST3715",
-      "original_message": "",
-      "masked_message": "My name is [NAME]. Need to change delivery address. [NAME]: [EMAIL], Phone: 001-887-780-8507x88915. New address: 1404 [NAME], [NAME], AK 56054. Card: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:38.938295"
-    },
-    {
-      "ticket_id": "CUST2188",
-      "customer_id": "CUST2188",
-      "original_message": "",
-      "masked_message": "Hello, I'm [NAME]. Track my order please. [NAME]: [EMAIL], Phone: [PHONE]. Shipping to: 349 Kimberly Mills, [ADDRESS], [ADDRESS]. Card used: [CREDIT_CARD].",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:52:39.487812"
-    },
-    {
-      "ticket_id": "CUST8602",
-      "customer_id": "CUST8602",
-      "original_message": "",
-      "masked_message": "My Name is [NAME] from [ADDRESS]",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:54:39.010149"
-    },
-    {
-      "ticket_id": "CUST5528",
-      "customer_id": "CUST5528",
-      "original_message": "",
-      "masked_message": "my name is [NAME] mobile number [PII] lives in [ADDRESS]",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T15:55:36.505134"
-    },
-    {
-      "ticket_id": "CUST2876",
-      "customer_id": "CUST2876",
-      "original_message": "",
-      "masked_message": "my name is [NAME] from [ADDRESS]",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T16:10:34.027457"
-    },
-    {
-      "ticket_id": "CUST7042",
-      "customer_id": "CUST7042",
-      "original_message": "",
-      "masked_message": "my name is narasimha mobile number [PHONE] lives in [ADDRESS]",
-      "detected_pii": {},
-      "agent_reasoning": "",
-      "processor": "langgraph-agent",
-      "processed_at": "2025-11-11T16:11:02.413485"
+      "message_id": "msg-70a632fa-e397-4338-9cd1-ea3832500c48",
+      "customer_id": "CUST7794",
+      "masked_message": "hi my order id is 328",
+      "has_pii": false,
+      "source_topic": "input-events",
+      "ingested_at": "2025-11-14T16:36:45.412442"
     }
   ],
   "metadata": {
-    "total": 54,
-    "last_updated": "2025-11-11T16:11:02.413530"
+    "last_updated": "2025-11-14T16:36:45.412496",
+    "total": 11
   }
 }

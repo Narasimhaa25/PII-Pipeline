@@ -151,6 +151,16 @@ Return ONLY the masked message text, no JSON, no additional formatting."""
     
     def process_message(self, customer_message: str) -> dict:
         """Process a customer message through the PII detection and masking pipeline"""
+        # Guard against empty messages - don't process them
+        if not customer_message or not customer_message.strip():
+            return {
+                "original_message": customer_message,
+                "masked_message": customer_message,  # Return as-is (empty)
+                "detected_pii": {"detected_pii": [], "has_pii": False, "reasoning": "The customer message is empty, therefore no PII was detected."},
+                "reasoning": "The customer message is empty, therefore no PII was detected.",
+                "should_produce": False  # Flag to indicate this should not be produced to sanitized topics
+            }
+        
         initial_state = {
             "messages": [],
             "customer_message": customer_message,
@@ -165,7 +175,8 @@ Return ONLY the masked message text, no JSON, no additional formatting."""
             "original_message": customer_message,
             "masked_message": final_state["masked_message"],
             "detected_pii": final_state["detected_pii"],
-            "reasoning": final_state["reasoning"]
+            "reasoning": final_state["reasoning"],
+            "should_produce": True  # Valid message, should be produced
         }
 
 # Singleton instance

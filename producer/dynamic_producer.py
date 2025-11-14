@@ -1,8 +1,3 @@
-"""
-Dynamic producer that takes user input and sends messages to Kafka.
-Allows interactive testing of the PII pipeline with custom messages.
-"""
-
 import asyncio
 import json
 import os
@@ -11,14 +6,16 @@ from aiokafka import AIOKafkaProducer
 
 fake = Faker()
 
+def detect_bootstrap():
+    """Detect correct Kafka host automatically."""
+    if os.path.exists("/.dockerenv"):
+        return "kafka:9092"
+    return "localhost:9094"
+
 async def send_user_message():
-    """Send user-provided messages to Kafka interactively."""
+    bootstrap = detect_bootstrap()
+    print(f"📡 Connecting to Kafka at {bootstrap}...")
 
-    # Detect environment automatically
-    bootstrap = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9094")
-    print(f"📡 Connecting to Kafka broker at {bootstrap}...")
-
-    # Initialize producer
     producer = AIOKafkaProducer(
         bootstrap_servers=bootstrap,
         value_serializer=lambda v: json.dumps(v).encode("utf-8")
@@ -27,45 +24,23 @@ async def send_user_message():
     await producer.start()
 
     try:
-        print("\n🎯 Dynamic PII Pipeline Producer")
-        print("Enter your message (type 'quit' to exit):")
-        print("Tip: Include PII like names, emails, phones, addresses, SSNs, credit cards")
-        print("-" * 70)
-
         while True:
-            user_input = input("\n📝 Your message: ").strip()
-            if user_input.lower() in {"quit", "exit", "q"}:
-                print("👋 Goodbye!")
+            msg = input("Message: ").strip()
+            if msg.lower() in ("quit", "exit"):
                 break
-            if not user_input:
-                print("⚠️  Please enter a non-empty message.")
-                continue
 
-            message_data = {
-                "customer_id": f"CUST{fake.random_int(1000, 9999)}",
-                "message": user_input,
-                "metadata": {
-                    "source": "dynamic_input",
-                    "generated": False
-                }
+            data = {
+                "message_id": f"msg-{fake.uuid4()}",
+                "customer_id": f"CUST{fake.random_int(1000,9999)}",
+                "text": msg
             }
 
-            await producer.send_and_wait("input-events", message_data)
+            await producer.send_and_wait("input-events", data)
+            print("Sent:", data)
 
-            print(f"✅ Sent message for customer {message_data['customer_id']}")
-            print("📨 Message sent to PII processing pipeline!")
-            print("   → Presidio consumer will mask PII")
-            print("   → JSON ingestor will store results")
-
-    except KeyboardInterrupt:
-        print("\n👋 Interrupted by user. Exiting gracefully...")
     finally:
         await producer.stop()
-        print("🔌 Disconnected from Kafka.")
+        print("Disconnected")
 
 if __name__ == "__main__":
-    print("🚀 Starting dynamic producer...")
-    print("Ensure Kafka and ambient services are running:")
-    print("   docker compose -f docker-compose.kafka.yml up -d")
-    print("-" * 70)
     asyncio.run(send_user_message())

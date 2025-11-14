@@ -7,6 +7,9 @@ langchain
 langchain-openai
 langchain-core
 faker
+fastapi
+uvicorn
+requests
 
 # Presidio for PII detection (rule-based + ML)
 presidio-analyzer
