@@ -52,11 +52,11 @@ Developers only publish messages → the ambient agent automatically detects, ma
 ## 2. Architecture
 
 ```
-┌────────────────┐       ┌───────────────────────┐       ┌────────────────────────┐
-│  Producer      │  ---> │  input-* Kafka Topics │ ----> │  Ambient Agent (PII)   │
-└────────────────┘       └───────────────────────┘       │  ^input-* subscription │
-                                                         │  Calls LLM Service(Listener)    │
-                                                         └─────────┬──────────────┘
+┌────────────────┐       ┌───────────────────────┐       ┌──────────────────────────────────
+│  Producer      │  ---> │  input-* Kafka Topics │ ----> │  Ambient Agent (PII)(Listener)   │
+└────────────────┘       └───────────────────────┘       │  ^input-* subscription           │
+                                                         │  Calls LLM Service               │
+                                                         └─────────┬────────────────────────           ┘
                                                                    │
                                                                    ▼
                                                      ┌──────────────────────────┐
